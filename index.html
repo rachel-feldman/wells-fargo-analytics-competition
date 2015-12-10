@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wells Fargo Analytics Competition by rachel-feldman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Wells Fargo Analytics Competition</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/rachel-feldman/wells-fargo-analytics-competition" class="btn">View on GitHub</a>
+      <a href="https://github.com/rachel-feldman/wells-fargo-analytics-competition/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rachel-feldman/wells-fargo-analytics-competition/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="a-plan-for-action-for-social-media-response" class="anchor" href="#a-plan-for-action-for-social-media-response" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Plan for Action for Social Media Response</h1>
+
+<h3>
+<a id="by-rachel-feldman-jeniffer-soto-perez-and-casey-salvador" class="anchor" href="#by-rachel-feldman-jeniffer-soto-perez-and-casey-salvador" aria-hidden="true"><span class="octicon octicon-link"></span></a>BY RACHEL FELDMAN, JENIFFER SOTO-PEREZ, AND CASEY SALVADOR</h3>
+
+<h2>
+<a id="-the-competition" class="anchor" href="#-the-competition" aria-hidden="true"><span class="octicon octicon-link"></span></a> The Competition</h2>
+
+<p>&gt; &gt; Dialogues on social media can provide tremendous insight into the behaviors, desires, pains, and thoughts of consumers. We'd like your help in developing a repeatable process that identifies, classifies, and extracts the underlying drivers of consumer financial conversations and comments in social media data. </p>
+
+<h2>
+<a id="1---preparing-the-data" class="anchor" href="#1---preparing-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>1   PREPARING THE DATA</h2>
+
+<p>In order to pull useful information from the data given, we but the dataset in R studio.  We mined the tweets and posts through R Studio, getting rid of blank spaces, messages that did not tag a particular bank.  Additionally, we spell checked the information. </p> 
+
+<h2>
+<a id="2---approach-and-methodology" class="anchor" href="#2---approach-and-methodology" aria-hidden="true"><span class="octicon octicon-link"></span></a>2   APPROACH AND METHODOLOGY</h2>
+
+<p>Deliverable A - Describe your Approach and Methodology. Include a visual representation of your analytic process flow. 
+Once we prepared the tweets and posts for analysis, we used an agile methodology so we could test small amounts of data at a time to quicken the process, that would be representative of things we could get when testing the entire data set.  
+An agile methodology was chosen so the many questions could be answered and so methods could be repeated and compared for each bank. Through a process, we tested 1000 random samples of the entire data set and then 1000 random samples of only bank A to compare and contrast differences.
+Below, find a graphical representation of the analytic and developmental approach taken.  It will show first cleaning the data where the team got rid of any additional room that was taking up space.  The team then tested the data overall to find positive and negative sentiment words as well as high-frequency words.  This gave us the framework to look at the data as a whole before looking into the context of each bank.  This step also allowed for the creation of two separate files for negative and positive posts.  
+The team indexed each bank to then replicate the tests: positive and negative as well as word frequency. 
+The results were then tested against the results as a whole.</p>
+
+![Method](http://imgur.com/XI5Eh29)
+<h2>
+<a id="3---social-conversation-starters" class="anchor" href="#3---social-conversation-starters" aria-hidden="true"><span class="octicon octicon-link"></span></a>3   SOCIAL CONVERSATION STARTERS</h2>
+<p>Deliverable B - Discuss the data and its relationship to social conversation drivers. 
+To find the social conversation drivers, we started to index the data.  First, we did this by positive vs. negative.  We then asked the questions of what started the conversation and what variables, from the given data, connect.
+Questions that connect to this were is there a correlation between positive/ negative remarks on different days of the week or times of the month?  Is there a different sort of sentiment on twitter compared to facebook?
+If given additional information, more questions that could be answered are is location a factor in and of these posts? Can we geo locate, through social media, a branch that is doing really well vs poorly? Does location drive a certain feeling toward one bank or another?  Another group of questions that could be answered with additional information is time and if Time is a factor for overall sentiment, topic, or substance.  Finally, an interesting factor into all of these questions would be looking at the ages of the different posters and seeing if there is any correction between age, sentiment, topic, substance, location, and time of day.
+After answering these questions for a specific bank and finding numbers, comparing these to the overall internet averages would be beneficial to see where the banking world falls in social conversation compared to other industries. 
+</p>
+
+<h2>
+<a id="-coder-load-data-set-dfrdaloaddfrdadffulltext--ascharacterdffulltext-grab-just-the-texts-so-you-can-load-them-in-the-corpusdftexts--asdataframedfncoldfcolnamesdftexts--fulltext-remove-non-ascii-charactersdftextsclean--asdataframeiconvdftextsfulltext-latin1--------------------------------------ascii-subcolnamesdftextsclean--fulltextdffulltext--dftextscleanfulltext-to-test-on-10000-samples-using-df10000idx10000--sample1nrowdf10000df10000--dfidx10000dfentire--dfdf--df10000-load-in-corpus-form-using-the-tm-librarylibrarytm-docs-100-aesword-freq----p--2scoresveryneg--asnumericscoresscore--5--topics-discussed" class="anchor" href="#-coder-load-data-set-dfrdaloaddfrdadffulltext--ascharacterdffulltext-grab-just-the-texts-so-you-can-load-them-in-the-corpusdftexts--asdataframedfncoldfcolnamesdftexts--fulltext-remove-non-ascii-charactersdftextsclean--asdataframeiconvdftextsfulltext-latin1--------------------------------------ascii-subcolnamesdftextsclean--fulltextdffulltext--dftextscleanfulltext-to-test-on-10000-samples-using-df10000idx10000--sample1nrowdf10000df10000--dfidx10000dfentire--dfdf--df10000-load-in-corpus-form-using-the-tm-librarylibrarytm-docs-100-aesword-freq----p--2scoresveryneg--asnumericscoresscore--5--topics-discussed" aria-hidden="true"><span class="octicon octicon-link"></span></a> CODE
+
+```R
+# Load data set ('df.Rda')
+load("df.Rda")
+df$FullText = as.character(df$FullText)
+
+# Grab just the texts, so you can load them in the Corpus
+df.texts = as.data.frame(df[,ncol(df)])
+colnames(df.texts) = 'FullText'
+
+# Remove non-ascii characters
+df.texts.clean = as.data.frame(iconv(df.texts$FullText, "latin1", 
+                                     "ASCII", sub=""))
+colnames(df.texts.clean) = 'FullText'
+
+df$FullText = df.texts.clean$FullText
+
+# To test on 10000 samples using df.10000
+idx.10000 = sample(1:nrow(df),10000)
+df.10000 = df[idx.10000,]
+
+df.entire = df
+df = df.10000
+
+# Load in corpus form using the tm library
+library(tm) 
+docs 100), aes(word, freq))    
+p = 2)
+scores$very.neg = as.numeric(scores$score  5  TOPICS DISCUSSED</h2>
+
+<p>Looking at the positive and negative posts separately, the three main topics discussed were customer service, fees and ATM.
+Customer Service
+-   Positive tones: Customer service assisted user with information about fees
+-   Negative tone: Users dissatisfied about fees and customer service
+Top 10 Topics discussed: Customer Service
+1.  ATM
+2.  Security
+3.  Privacy
+4.  App
+5.  Account Access
+6.  Account Request
+7.  Card
+8.  Customer Loss
+9.  Fees
+
+ATM
+*Customer dislikes interacting with ATM due to lack of privacy, security, and customer service. 
+*Card often goes unread at ATM’s and stores.
+
+Customer Service 
+*Customer is leaving bank because of rude bankers.
+*Customer Service was not helpful in explaining fees.
+*Customer dislikes ATM due to lack of customer service
+
+Fees
+*Customer  leaving bank  because of excessive fees.
+*Customer has found more favorable conditions  at different bank .
+*Too many fees withdrawing money at ATMs 
+
+</p>
+
+<h2>
+<a id="insights" class="anchor" href="#insights" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSIGHTS</h2>
+
+<h3>
+<a id="classification-to-find-comments-of-substance-" class="anchor" href="#classification-to-find-comments-of-substance-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification to find comments of substance. </h3>
+
+<p>We started creating a code that would classify the tweets and posts into spam or real.  We did this for the positive and negative posts separately to see the differences and similarities between what can be responded to, both on social media, as well as from a business stand-point.  In doing so, and testing on parts of the data, we created two decision trees that showed what kew words (aside from names, twitter handle, and the bank name)  
+Our suggestion would be to have the people responding to tweets/ posts putting if they are spam or not so the algorithm becomes more sophisticated.  In doing so, when looking at the tweets later on, the data will be better minned if there was an algorithm that took out nonrelevant or ‘spam’ tweets and posts.  </p>
+
+<p><img src="http://imgur.com/MVc6AGL" alt="">
+According to our tree diagram, this diagram displays the positive relevant words. This is significant because here we are able to plot the relevancy of positive sentiments as it shows overall bank's performance within the industry. When banks are acknowledge for their service they receive positive statements within a .5 relevancy.</p>
+
+<h3>
+<a id="-frequent-topics" class="anchor" href="#-frequent-topics" aria-hidden="true"><span class="octicon octicon-link"></span></a> Frequent Topics</h3>
+
+<p><img src="http://imgur.com/b55BLtt" alt=""></p>
+
+<p><img src="http://imgur.com/e0zrX0w" alt=""></p>
+
+<p>Regardless of sentiment value, the four banks were surveyed to find the most common topics for each, represented in a word cloud.
+Bank A included service, account, money, check, help, customer service and phone.  These words show that most of the posts do have to do with the bank and the conversations are about aspects of the bank.  Also, it is of note that bankB is commonly mentioned so bankA and bankB may be close competitors.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rachel-feldman/wells-fargo-analytics-competition">Wells Fargo Analytics Competition</a> is maintained by <a href="https://github.com/rachel-feldman">rachel-feldman</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
